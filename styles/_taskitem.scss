@@ -1,0 +1,89 @@
+@use "ThemeProvider/mainstyles" as theme;
+
+//When the Task is not complete
+.task-item-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+  padding: 1.3em 0.7em;
+  width: 70.5vw;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  transition: background 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  @include theme.taskItemAnimation();
+
+  &:nth-child(1n + 1) {
+    background: #2a2a72;
+  }
+
+  &:nth-child(2n + 2) {
+    background: #009ffd;
+  }
+
+  &:nth-child(3n + 3) {
+    background: #ffa400;
+  }
+
+  .task-item-text-edit {
+    display: flex;
+    align-items: center;
+    margin-right: 2.5em;
+  }
+
+  .task-item-delete-button {
+    margin-top: 1.5em;
+    align-self: center;
+  }
+}
+
+//When the Task is completed
+.task-item-content-completed {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+  padding: 1.3em 0.7em;
+  width: 70.5vw;
+  background: #d0ccd0;
+  transition: background 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  @include theme.taskItemAnimation();
+
+  .task-item-text-edit {
+    display: flex;
+    align-items: center;
+    margin-right: 2.5em;
+  }
+
+  .task-item-delete-button {
+    margin-top: 1.5em;
+    align-self: center;
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .task-item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 36em);
+
+    .task-item-text-edit {
+      margin-right: 0em;
+    }
+  }
+
+  .task-item-content-completed {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 36em);
+
+    .task-item-text-edit {
+      margin-right: 0em;
+    }
+  }
+}

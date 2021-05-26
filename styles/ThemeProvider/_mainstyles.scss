@@ -1,0 +1,93 @@
+//Media Queries
+$media-query-value: 31em;
+$media-query-value-alternate: 35em;
+
+//Font Colors
+$color-dark: #222222;
+$color-light: #fbfcff;
+
+//Background Colors
+$content-dark: #37474f;
+$content-light: #dee4e7;
+
+//Animation Time
+$transition-duration: 0.25s;
+
+@mixin centralizeContent() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+}
+
+@mixin scaleInAnimation() {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-animation: scale-in-center 0.65s ease-in-out both;
+  animation: scale-in-center 0.65s ease-in-out both;
+}
+
+//Scale In Animation
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+//Task Item Animation
+
+@mixin taskItemAnimation() {
+  -webkit-animation: scale-in-center 0.65s ease-in-out both;
+  animation: scale-in-center 0.65s ease-in-out both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,101 @@
+@use "ThemeProvider/mainstyles" as theme;
+
+.task-bg {
+  background: #fffded;
+  transition: background theme.$transition-duration ease-in-out;
+}
+
+.task-bg-dark {
+  background: #222222;
+  transition: background theme.$transition-duration ease-in-out;
+}
+
+.task-manager-wrapper {
+  width: 100%;
+}
+
+.task-manager-position {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.task-manager-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  background: theme.$content-light;
+  width: min(80%, 36em);
+  padding: 1.25em;
+  border-radius: 15px;
+  transition: background theme.$transition-duration ease-in-out;
+
+  .task-manager-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      color: theme.$color-dark;
+      margin-top: 0.1em;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    h3 {
+      color: theme.$color-dark;
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      margin-top: -0.7em;
+      transition: color theme.$transition-duration ease-in-out;
+    }
+  }
+}
+
+.task-manager-content-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  background: theme.$content-dark;
+  width: min(80%, 36em);
+  padding: 1.25em;
+  border-radius: 15px;
+  transition: background theme.$transition-duration ease-in-out;
+
+  .task-manager-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      color: theme.$color-light;
+      margin-top: 0.1em;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    h3 {
+      color: theme.$color-light;
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      margin-top: -0.7em;
+      transition: color theme.$transition-duration ease-in-out;
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .task-manager-content {
+    padding: 2em;
+  }
+
+  .task-manager-content-dark {
+    padding: 2em;
+  }
+}

@@ -1,0 +1,93 @@
+@use "../ThemeProvider/mainstyles" as theme;
+
+.date-edit-modal-content {
+  @include theme.centralizeContent();
+  flex-direction: column;
+  background: theme.$content-light;
+  padding: 1.7em;
+
+  .date-edit-modal-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .submit-deadline-edit-button {
+      margin-bottom: 0em;
+      margin-right: 0.5em;
+    }
+
+    .cancel-deadline-edit-button {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+.date-edit-modal-content-dark {
+  @include theme.centralizeContent();
+  flex-direction: column;
+  background: theme.$content-dark;
+  padding: 1.7em;
+
+  .date-edit-modal-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .submit-deadline-edit-button {
+      margin-bottom: 0em;
+      margin-right: 0.5em;
+    }
+
+    .cancel-deadline-edit-button {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-value-alternate) {
+  .date-edit-modal-content {
+    flex-direction: row;
+
+    div:first-child {
+      margin-right: 0.75em;
+    }
+    .date-edit-modal-buttons {
+      display: flex;
+      flex-direction: column;
+      width: min(16.5vw, 10em);
+
+      .submit-deadline-edit-button {
+        margin-bottom: 1em;
+        margin-right: 0em;
+      }
+
+      .cancel-deadline-edit-button {
+        margin-left: 0em;
+      }
+    }
+  }
+
+  .date-edit-modal-content-dark {
+    flex-direction: row;
+
+    div:first-child {
+      margin-right: 0.75em;
+    }
+    .date-edit-modal-buttons {
+      display: flex;
+      flex-direction: column;
+      width: min(16.5vw, 10em);
+
+      .submit-deadline-edit-button {
+        margin-bottom: 1em;
+        margin-right: 0em;
+      }
+
+      .cancel-deadline-edit-button {
+        margin-left: 0em;
+      }
+    }
+  }
+}
+
+.date-edit-modal-animation {
+  @include theme.scaleInAnimation();
+}

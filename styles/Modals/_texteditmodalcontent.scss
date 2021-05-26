@@ -1,0 +1,29 @@
+@use "../ThemeProvider/mainstyles" as theme;
+
+.text-edit-modal-content {
+  @include theme.centralizeContent();
+  background: theme.$content-light;
+  padding: 1.7em;
+
+  div:nth-child(2) {
+    display: grid;
+    grid-gap: 1.35em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.text-edit-modal-content-dark {
+  @include theme.centralizeContent();
+  background: theme.$content-dark;
+  padding: 1.7em;
+
+  div:nth-child(2) {
+    display: grid;
+    grid-gap: 1.35em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.text-edit-modal-animation {
+  @include theme.scaleInAnimation();
+}

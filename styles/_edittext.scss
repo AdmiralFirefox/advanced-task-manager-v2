@@ -1,0 +1,51 @@
+@use "ThemeProvider/mainstyles" as theme;
+
+.edit-text-styles-content {
+  div:first-child {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      color: #fbfcff;
+      margin-top: 0.2em;
+      margin-bottom: 0.45em;
+      word-break: break-word;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+  }
+}
+
+.edit-text-styles-content-completed {
+  div:first-child {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      color: #988b8e;
+      text-decoration: line-through;
+      font-style: italic;
+      margin-top: 0.2em;
+      margin-bottom: 0.45em;
+      word-break: break-word;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .edit-text-styles-content {
+    div:first-child {
+      h2 {
+        margin-top: 0em;
+      }
+    }
+  }
+
+  .edit-text-styles-content-completed {
+    div:first-child {
+      h2 {
+        margin-top: 0em;
+      }
+    }
+  }
+}

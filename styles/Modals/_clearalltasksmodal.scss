@@ -1,0 +1,47 @@
+@use "../ThemeProvider/mainstyles" as theme;
+
+.clear-all-tasks-modal-content {
+  @include theme.centralizeContent();
+  padding: 1em;
+  background: theme.$content-light;
+  width: min(80%, 30em);
+  outline: none !important;
+
+  div:first-child {
+    h1 {
+      color: theme.$color-dark;
+      font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    }
+  }
+
+  div:nth-child(2) {
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.clear-all-tasks-modal-content-dark {
+  @include theme.centralizeContent();
+  padding: 1em;
+  background: theme.$content-dark;
+  width: min(80%, 30em);
+  outline: none !important;
+
+  div:first-child {
+    h1 {
+      color: theme.$color-light;
+      font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    }
+  }
+
+  div:nth-child(2) {
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.clear-all-task-animation {
+  @include theme.scaleInAnimation();
+}
