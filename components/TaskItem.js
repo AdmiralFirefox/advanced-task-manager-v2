@@ -47,7 +47,6 @@ function TaskItem({
 }) {
   return (
     <div
-      key={task.id}
       className={
         task.completed
           ? taskItemStyles["task-item-content-completed"]

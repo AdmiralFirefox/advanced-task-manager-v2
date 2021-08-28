@@ -13,7 +13,7 @@ export default function Home() {
   const [task, setTask] = useState("");
   const [editTask, setEditTask] = useState(null);
   const [editText, setEditText] = useState("");
-  const [deadline, setDeadline] = useState("No Deadline");
+  const [deadline, setDeadline] = useState("");
   const [editDeadline, setEditDeadline] = useState(null);
   const [editTextDeadline, setEditTextDeadline] = useState("");
   const [clearAllTaskModal, setClearAllTaskModal] = useState(false);
@@ -91,7 +91,7 @@ export default function Home() {
 
     setTasks([...tasks].concat(newTask));
     setTask("");
-    setDeadline("No Deadline");
+    setDeadline("");
   }
 
   //Delete Task
@@ -142,7 +142,7 @@ export default function Home() {
   function clearDeadline(id) {
     const updatedTasks = [...tasks].map((task) => {
       if (task.id === id) {
-        task.finished = "No Deadline";
+        task.finished = "";
       }
       return task;
     });

@@ -72,7 +72,11 @@ function DeadlineEdit({
         >
           <div>
             <h2 className={deadlineEditStyles["date-edit-title"]}>Deadline:</h2>
-            <h2>{task.finished}</h2>
+            {task.finished === "" ? (
+              <h2>No Deadline</h2>
+            ) : (
+              <h2>{new Date(task.finished).toLocaleString()}</h2>
+            )}
           </div>
           <div className={deadlineEditStyles["date-edit-buttons"]}>
             <div>
@@ -108,7 +112,11 @@ function DeadlineEdit({
         >
           <div>
             <h2 className={deadlineEditStyles["date-edit-title"]}>Deadline:</h2>
-            <h2>{task.finished}</h2>
+            {task.finished === "" ? (
+              <h2>No Deadline</h2>
+            ) : (
+              <h2>{new Date(task.finished).toLocaleString()}</h2>
+            )}
           </div>
           <div className={deadlineEditStyles["date-edit-buttons"]}>
             <div>

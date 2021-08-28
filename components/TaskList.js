@@ -23,6 +23,7 @@ function TaskList({
       {tasks.map((task) => {
         return (
           <TaskItem
+            key={task.id}
             task={task}
             deleteTask={deleteTask}
             taskCompleted={taskCompleted}
